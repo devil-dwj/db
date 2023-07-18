@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package sql;
+
+option go_package = "github.com/devil-dwj/db/sql;sql";
+
+import "google/protobuf/descriptor.proto";
+
+message Sql {
+    string raw = 1;
+}
+
+extend google.protobuf.MessageOptions {
+    Sql sql = 20000;
+}
