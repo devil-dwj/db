@@ -1,6 +1,7 @@
 package db
 
 import (
+	"errors"
 	"time"
 
 	"github.com/uptrace/opentelemetry-go-extra/otelgorm"
@@ -13,6 +14,10 @@ const (
 	defaultMaxOpenConns = 4
 	defaultMaxIdleTime  = time.Second * 30
 	defaultMaxLifeTime  = time.Minute * 10
+)
+
+var (
+	ErrNotFindRecord = errors.New("not find record")
 )
 
 type Option func(*options)

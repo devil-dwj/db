@@ -1,5 +1,8 @@
-module github.com/devil-dwj/wms-bee/db/cmd/protoc-gen-go-procedure
+module github.com/devil-dwj/db/cmd/protoc-gen-go-procedure
 
 go 1.16
 
-require google.golang.org/protobuf v1.28.0
+require (
+	github.com/iancoleman/strcase v0.3.0
+	google.golang.org/protobuf v1.28.0
+)
